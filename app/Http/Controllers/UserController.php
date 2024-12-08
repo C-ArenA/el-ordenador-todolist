@@ -7,14 +7,6 @@ use App\Models\User;
 
 class UserController extends Controller
 {
-    public function prueba(){
-        $user = new User;
-        $user->name = 'Juan Perez';
-        $user->email = "juan@gmail.com";
-        $user->password = bcrypt('1234');
-        $user->save();
-    }
-
     public function index(){
         $usuarios = User::all();
         return $usuarios;
@@ -23,7 +15,7 @@ class UserController extends Controller
     public function create(){
         return view('create');
     }
-    
+
     public function store(Request $request){
         $user = new User();
         $user->name = $request->input('name');
@@ -41,7 +33,7 @@ class UserController extends Controller
     public function edit($id){
         $user = User::find($id);
         return view('edit')->with('user',$user);
-    } 
+    }
 
     public function update(Request $request,$id){
         $user = User::find($id);
