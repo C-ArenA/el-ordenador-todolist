@@ -1,8 +1,2 @@
-<form action="{{ route('users.delete')}}" method="POST">
-    @csrf
-    @method('DELETE')
-    <label for="user_id">ID del Usuario:</label>
-    <input type="number" name="id" id="user_id" placeholder="Introduce el ID" required>
-    <button type="submit">Eliminar Usuario</button>
-
-</form>
+<p>{{ $users }}</p> {{-- TODO: Ordenar los usuarios en una lista --}}
+<a href="#">Crear Nuevo Usuario</a> {{-- TODO: Dirigir a la ruta de creación de usuario--}}

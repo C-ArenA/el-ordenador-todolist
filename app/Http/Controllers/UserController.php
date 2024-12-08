@@ -11,7 +11,7 @@ class UserController extends Controller
     {
         $usuarios = User::all();
 
-        return $usuarios;
+        return view('users.index', ['users' => $usuarios]);
     }
 
     public function create()
