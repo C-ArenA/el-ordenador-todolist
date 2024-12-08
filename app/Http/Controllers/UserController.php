@@ -55,9 +55,9 @@ class UserController extends Controller
         return 'Modificacion exitosa';
     }
 
-    public function destroy(Request $request)
+    public function destroy($id)
     {
-        $user = User::find($request->input('id'));
+        $user = User::find($id);
         $user->delete();
 
         return 'Usuario eliminado con exito';

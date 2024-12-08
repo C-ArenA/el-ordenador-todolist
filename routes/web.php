@@ -13,6 +13,4 @@ Route::post('users', [UserController::class, 'store'])->name('users.store');
 Route::get('users/{id}', [UserController::class, 'show'])->name('users.show');
 Route::get('users/{id}/edit', [UserController::class, 'edit'])->name('users.edit');
 Route::put('users/{id}', [UserController::class, 'update'])->name('users.update');
-//Para la clase delete utilice un formulario en index, donde se pasa el id de la persona que se quiere eliminar
-//La ruta para borrar es /user, no logre pasar los parametros de manera dinamica desde el formulario :(
-Route::delete('/users', [UserController::class, 'destroy'])->name('users.delete');
+Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
