@@ -1,4 +1,4 @@
-<form action="{{ route('user.create') }}" method="post">
+<form action="{{ route('users.store') }}" method="post">
     @csrf
     <input type="text" name="name" id="name" placeholder="Nombre:" required>
     <input type="email" name="email" id="email" placeholder="Email:" required>
