@@ -16,7 +16,7 @@ class UserController extends Controller
 
     public function create()
     {
-        return view('create');
+        return view('users.create');
     }
 
     public function store(Request $request)
@@ -34,14 +34,14 @@ class UserController extends Controller
     {
         $user = User::find($id);
 
-        return $user;
+        return view('users.show', ['user' => $user]);
     }
 
     public function edit($id)
     {
         $user = User::find($id);
 
-        return view('edit')->with('user', $user);
+        return view('users.edit', ['user' => $user]);
     }
 
     public function update(Request $request, $id)
