@@ -13,7 +13,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-mono dark:bg-jucux-900 dark:text-slate-200 selection:bg-jucux-500 selection:text-jucux-900">
+<body class="font-mono dark:bg-gradient-to-tr dark:from-jucux-900 dark:via-jucux-900 dark:to-jucux-400 dark:bg-jucux-900 dark:text-slate-200 selection:bg-jucux-500 selection:text-jucux-900 shadow-white">
     <header class="fixed w-screen flex items-center justify-between px-9 py-4">
         <div class="flex items-center gap-5">
             <img src="./jucux.png" alt="logo de Jucux" class="block w-10">
@@ -28,7 +28,7 @@
 <span class="text-sm bg-jucux-500 hover:opacity-100 opacity-50 text-jucux-900 py-1 px-2">Yet Another ToDoList</span>
         </div>
     <p class="text-xl dark:text-gray-400 font-sans">Mi mama me mima, el ordenador me humilla. To Do List gritona y regañona</p>
-    <a class="rounded-sm text-xl px-3 py-2 dark:bg-jucux-400 hover:dark:bg-jucux-300 hover:text-2xl hover:cursor-pointer shadow-xl shadow-slate-800 text-jucux-900 font-bold">Elijo Sufrir</a>
+    <a href="{{ route('login') }}" class="rounded-sm text-xl px-3 py-2 dark:bg-jucux-400 hover:dark:bg-jucux-300 hover:text-2xl hover:cursor-pointer shadow-xl shadow-slate-800 text-jucux-900 font-bold">Elijo Sufrir</a>
     </section>
 </body>
 
