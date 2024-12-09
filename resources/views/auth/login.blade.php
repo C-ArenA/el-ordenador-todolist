@@ -23,6 +23,7 @@
             <input class="rounded-lg my-2 px-3 py-1 text-2xl dark:text-slate-300 dark:bg-transparent border border-slate-700 focus:outline-none focus:dark:ring-1 focus:dark:ring-jucux-500" type="password" name="password" id="password">
             <button type="submit" class="mt-6 block dark:bg-jucux-400 hover:shadow-slate-600 shadow-xl shadow-slate-800 dark:text-jucux-900 px-3 py-2 rounded-lg text-2xl ">Ingresar</button>
         </form>
+        <p class="text-slate-700">Para registrarte contacta al 75844266</p>
     </section>
 </body>
 
