@@ -11,9 +11,15 @@ export default {
     ],
     theme: {
         extend: {
-            fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-            },
+            colors: {
+                jucux: {
+                    300: "#50f0e0",
+                    400: "#40E0D0",
+                    500: "#f9e784",
+                    800: "7f7f7f",
+                    900: "#011627"
+                }
+            }
         },
     },
     plugins: [],
