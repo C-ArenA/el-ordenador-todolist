@@ -1,3 +1,4 @@
+Formulario para la creacion de un nuevo usuario:
 <form action="{{ route('users.store') }}" method="post">
     @csrf
     <input type="text" name="name" id="name" placeholder="Nombre:" required>

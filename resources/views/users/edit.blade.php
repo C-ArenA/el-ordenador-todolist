@@ -1,3 +1,4 @@
+Formulario para editar un usuario existente:
 <form action="{{ route('users.update', $user->id) }}" method="POST">
     @csrf
     @method('PUT')

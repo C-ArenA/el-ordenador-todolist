@@ -27,7 +27,7 @@ class UserController extends Controller
         $user->password = bcrypt($request->input('password'));
         $user->save();
 
-        return $user;
+        return redirect()->route('users.index')->with('success_create', 'Usuario creado exitosamente');
     }
 
     public function show($id)
@@ -52,7 +52,7 @@ class UserController extends Controller
         $user->password = bcrypt($request->input('password'));
         $user->save();
 
-        return 'Modificacion exitosa';
+        return redirect()->route('users.show',['id' => $user->id])->with('success_update', 'Usuario modificado exitosamente');
     }
 
     public function destroy($id)
@@ -60,6 +60,6 @@ class UserController extends Controller
         $user = User::find($id);
         $user->delete();
 
-        return 'Usuario eliminado con exito';
+        return redirect()->route('users.index')->with('success_eliminate', 'Usuario eliminado exitosamente');
     }
 }
