@@ -37,11 +37,11 @@ Mostrar usuario:
     <input type="text" id="id" placeholder="Introduce el ID:" required>
     <button type="submit">Mostrar Usuario</button> 
 </form>
-<!-- Tampoco pude enviar un parametro de manera dinamica sin un script :( -->
+
 <script>
     document.getElementById('showUserForm').addEventListener('submit', function (event) {
-        var id = document.getElementById('id').value; //Tuve un pequeño gran problema a la hora de establecer el URL 
-        this.action = "{{ url('users') }}/" + id;     //http://localhost/el-ordenador-todolist/public/users/12? no pude enviar la URL sin ?
+        var id = document.getElementById('id').value;
+        this.action = "{{ url('users') }}/" + id;
     });
 </script>
 
