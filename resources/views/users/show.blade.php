@@ -18,9 +18,7 @@ Información sobre el usuario {{ $user->name }}:
     @method('DELETE')
     <button type="submit">Eliminar Usuario</button>
 </form>
-
-<form action="{{ route('users.edit', $user->id) }}" method="GET">
-    <button type="submit">Editar Usuario</button>
-</form>
 <br>
-<a href="{{ route('users.index') }}">Atras</a><br>
+<a href="{{route('users.edit', $user->id)}}">Editar Usuario</a>
+<br>
+<a href="{{route('users.index')}}">Atras</a><br>
