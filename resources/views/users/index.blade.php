@@ -17,6 +17,7 @@
         <tr>
             <th>ID</th>
             <th>Nombre</th>
+            <th>Modificar</th>
         </tr>
     </thead>
     <tbody>
@@ -24,6 +25,7 @@
             <tr>
                 <td>{{ $user->id }}</td>
                 <td>{{ $user->name }}</td>
+                <td> <a href="{{ route('users.show', $user->id) }}">click</a></td>
             </tr>
         @endforeach
     </tbody>
