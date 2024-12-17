@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('tags', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->enum('color',['red','yellow','green','orange','blue','sky_blue','purple','brown','black','gray','white']);
+            $table->string('color');
             $table->timestamps();
         });
     }

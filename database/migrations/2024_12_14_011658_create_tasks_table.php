@@ -17,9 +17,9 @@ return new class extends Migration
             $table->enum('priority',['urgente','alta','media','baja']);
             $table->dateTime('deathline');
             $table->boolean('notifiable');
-            $table->foreignId('sentence_id');
-            $table->foreignId('team_id');
-            $table->foreignId('project_id');
+            $table->foreignId('sentence_id')->constrained();
+            $table->foreignId('team_id')->constrained();
+            $table->foreignId('project_id')->constrained();
             $table->timestamps();
         });
     }

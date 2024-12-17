@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('task_tag', function (Blueprint $table) {
-            $table->foreignId('task_id');
-            $table->foreignId('tag_id');
+            $table->foreignId('task_id')->constrained();
+            $table->foreignId('tag_id')->constrained();
             $table->timestamps();
         });
     }
