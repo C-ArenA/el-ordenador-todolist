@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Qualifier extends Model
 {
     use HasFactory;
-    
+
     protected $fillable = ['phrase', 'sentiment_level'];
 }

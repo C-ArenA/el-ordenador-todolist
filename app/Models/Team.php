@@ -11,6 +11,8 @@ class Team extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name'];
+
     public function tasks(): HasMany
     {
         return $this->hasMany(Task::class);
@@ -20,6 +22,4 @@ class Team extends Model
     {
         return $this->belongsToMany(User::class);
     }
-
-    protected $fillable = ['name'];
 }
