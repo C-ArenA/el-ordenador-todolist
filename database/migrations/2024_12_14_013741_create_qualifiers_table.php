@@ -11,9 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('phrases_dictionary', function (Blueprint $table) {
+        Schema::create('qualifiers', function (Blueprint $table) {
             $table->id();
-            $table->string('level');
+            $table->string('phrase');
+            $table->integer('sentiment_level')->unsigned()->comment('0 being the worst and 100 the best');
             $table->timestamps();
         });
     }
