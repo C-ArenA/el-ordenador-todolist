@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Sentence extends Model
 {
-    protected $fillable = ['imperative','detail'];
+    protected $fillable = ['imperative', 'detail'];
 
     public function tasks(): HasMany
     {

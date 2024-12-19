@@ -52,7 +52,7 @@ class UserController extends Controller
         $user->password = bcrypt($request->input('password'));
         $user->save();
 
-        return redirect()->route('users.show',['id' => $user->id])->with('success_update', 'Usuario modificado exitosamente');
+        return redirect()->route('users.show', ['id' => $user->id])->with('success_update', 'Usuario modificado exitosamente');
     }
 
     public function destroy($id)

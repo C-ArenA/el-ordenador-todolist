@@ -14,7 +14,7 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Team::class);
     }
-    
+
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
 

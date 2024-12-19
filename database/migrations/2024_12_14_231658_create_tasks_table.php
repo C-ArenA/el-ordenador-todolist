@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
-            $table->enum('status',['por hacer','haciendo','hecho']);
-            $table->enum('priority',['urgente','alta','media','baja']);
+            $table->enum('status', ['por hacer', 'haciendo', 'hecho']);
+            $table->enum('priority', ['urgente', 'alta', 'media', 'baja']);
             $table->dateTime('deathline');
             $table->boolean('notifiable');
             $table->foreignId('sentence_id')->constrained();
