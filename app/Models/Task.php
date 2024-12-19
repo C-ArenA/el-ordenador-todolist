@@ -15,12 +15,12 @@ class Task extends Model
         return $this->belongsTo(Project::class);
     }
 
-    public function teams(): BelongsTo
+    public function team(): BelongsTo
     {
         return $this->belongsTo(Team::class);
     }
 
-    public function sentences(): BelongsTo
+    public function sentence(): BelongsTo
     {
         return $this->belongsTo(Sentence::class);
     }
